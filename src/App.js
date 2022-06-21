@@ -1,5 +1,4 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import logo from './assets/image/logo.png';
 import './App.css';
 import Navbar from './components/Navbar';
 import Myprofile from './components/Myprofile';
@@ -13,7 +12,7 @@ function App() {
         <Route path="/missions" element={<div>Missions</div>} />
         <Route path="/myprofile" element={<Myprofile />} />
       </Routes>
-     </BrowserRouter>
-  );
+    </BrowserRouter>
+);
 }
 export default App;
