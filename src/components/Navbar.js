@@ -22,7 +22,10 @@ const Navbar = () => {
   ];
   return (
     <nav>
-      <img src={logo} alt="logo" />
+      <div className="nav-header">
+        <img src={logo} alt="logo" />
+        <h3>Space Travelers&apos; Hub</h3>
+      </div>
       <ul>
         {links.map((link) => (
           <li key={link.id}>
