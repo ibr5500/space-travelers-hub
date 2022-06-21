@@ -4,7 +4,7 @@ import Navbar from './components/Navbar';
 import Myprofile from './components/Myprofile';
 
 function App() {
-  return (
+      return (
     <BrowserRouter>
       <Navbar />
       <Routes>
@@ -13,6 +13,6 @@ function App() {
         <Route path="/myprofile" element={<Myprofile />} />
       </Routes>
     </BrowserRouter>
-);
+    );
 }
 export default App;
