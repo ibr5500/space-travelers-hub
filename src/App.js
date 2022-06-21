@@ -7,13 +7,13 @@ import Myprofile from './components/Myprofile';
 function App() {
   return (
     <BrowserRouter>
-    <Navbar />
-    <Routes>
-      <Route path="/" element={<div>Rockets</div>} />
-      <Route path="/missions" element={<div>Missions</div>} />
-      <Route path="/myprofile" element={<Myprofile />} />
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<div>Rockets</div>} />
+        <Route path="/missions" element={<div>Missions</div>} />
+        <Route path="/myprofile" element={<Myprofile />} />
       </Routes>
-        </BrowserRouter>
+     </BrowserRouter>
   );
 }
 export default App;
