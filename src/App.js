@@ -4,15 +4,15 @@ import Navbar from './components/Navbar';
 import Myprofile from './components/Myprofile';
 
 function App() {
- return (
-  <BrowserRouter>
+  return(
+    <BrowserRouter>
     <Navbar />
-      <Routes>
+     <Routes>
         <Route path="/" element={<div>Rockets</div>} />
         <Route path="/missions" element={<div>Missions</div>} />
         <Route path="/myprofile" element={<Myprofile />} />
       </Routes>
-   </BrowserRouter>
+    </BrowserRouter>
   );
 }
 export default App;
