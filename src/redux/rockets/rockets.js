@@ -1,1 +1,3 @@
-// const rocjets
+const Rocket = [];
+
+console.log(Rocket);
