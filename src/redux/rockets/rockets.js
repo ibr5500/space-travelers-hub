@@ -1,6 +1,3 @@
-const Rocket = [];
-
-console.log(Rocket);
 const ADD_ROCKET = 'ADD_ROCKET';
 const Rockets = [];
 
