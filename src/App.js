@@ -5,7 +5,6 @@ import Myprofile from './components/Myprofile';
 
 function App() {
   return (
-
     <BrowserRouter>
       <Navbar />
       <Routes>
