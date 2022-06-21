@@ -1,1 +1,2 @@
-# Space-Travelers-Hub
+# Space-Travelers-Hub: set up the project.
+
