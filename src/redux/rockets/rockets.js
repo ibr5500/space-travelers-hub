@@ -1,10 +1,23 @@
-const ADD_ROCKET = 'ADD_ROCKET';
+import axios from 'axios';
+
+const GET_DATA = 'GET_DATA';
+const baseURL = 'https://api.spacexdata.com/v3/rockets';
 const Rockets = [];
+
+export const fetchData = () => async (dispatch) => {
+  const res = await axios.get(`${baseURL}`);
+  return dispatch({ type: GET_DATA, payload: res.data });
+};
 
 const rocketsReducer = (state = Rockets, action) => {
   switch (action.type) {
-    case ADD_ROCKET:
-      return [...state, 'new_Rocket'];
+    case GET_DATA:
+      return action.payload.map((rocket) => ({
+        id: rocket.id,
+        name: rocket.rocket_name,
+        type: rocket.rocket_type,
+        image: rocket.flickr_images[0],
+      }));
     default:
       return state;
   }
