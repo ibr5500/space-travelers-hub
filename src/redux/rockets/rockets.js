@@ -1,4 +1,5 @@
 import axios from 'axios';
+// import { v4 as uuidv4 } from 'uuid';
 
 const GET_DATA = 'GET_DATA';
 const baseURL = 'https://api.spacexdata.com/v3/rockets';
@@ -16,7 +17,9 @@ const rocketsReducer = (state = Rockets, action) => {
         id: rocket.id,
         name: rocket.rocket_name,
         type: rocket.rocket_type,
-        image: rocket.flickr_images[0],
+        description: rocket.description,
+        image: rocket.flickr_images,
+        reserved: false,
       }));
     default:
       return state;

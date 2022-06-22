@@ -14,13 +14,13 @@ const Missions = () => {
     <div>
       Missions
       <div>
-        {displayMissions.map((mission) => (
-          <div key={mission.id}>
-            {mission.id}
-            ,
-            <h2>{mission.name}</h2>
-            ,
-            {mission.description}
+        {displayMissions.map((mission, index) => (
+          <div key={[index]}>
+            <div>
+              <h2>{mission.name}</h2>
+              <p>{mission.description}</p>
+            </div>
+            <hr />
           </div>
         ))}
       </div>
