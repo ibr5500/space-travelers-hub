@@ -16,7 +16,6 @@ const Rockets = () => {
         <div key={[index]} className="rocket">
           <img className="rocket-img" src={rocket.image} alt={rocket.name} />
           <div className="rocket-info">
-
             <h2>{rocket.name}</h2>
             <p>
               <span>Reserved</span>
