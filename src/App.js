@@ -10,7 +10,7 @@ function App() {
       <Navbar />
       <Routes>
         <Route path="/" element={<Rockets />} />
-        <Route path="/missions" element={<div>Missions</div>} />
+        <Route path="/missions" element={<Missions />} />
         <Route path="/myprofile" element={<Myprofile />} />
       </Routes>
     </BrowserRouter>
