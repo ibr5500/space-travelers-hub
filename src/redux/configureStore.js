@@ -10,6 +10,6 @@ const reducer = combineReducers({
   rockets: rocketsReducer,
 });
 
-const store = configureStore(reducer, applyMiddleware(thunk, logger));
+const store = configureStore({ reducer }, applyMiddleware(thunk, logger));
 
 export default store;
