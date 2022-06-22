@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { fetchData } from '../redux/missions/missions';
 
 const Missions = () => {
-  const displayRockets = useSelector((state) => state.missions);
+  const displayMissions = useSelector((state) => state.missions);
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -14,14 +14,14 @@ const Missions = () => {
     <div>
       Missions
       <div>
-        {displayRockets.map((mission) => (
-          <p key={mission.id}>
+        {displayMissions.map((mission) => (
+          <div key={mission.id}>
             {mission.id}
             ,
-            {mission.name}
+            <h2>{mission.name}</h2>
             ,
             {mission.description}
-          </p>
+          </div>
         ))}
       </div>
     </div>
