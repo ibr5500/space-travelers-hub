@@ -2,7 +2,7 @@ import axios from 'axios';
 
 const GET_DATA = 'GET_DATA';
 
-const baseURL = 'https://api.spacexdata.com/v3/rockets';
+const baseURL = 'https://api.spacexdata.com/v3/missions';
 const NEW_MISSION = 'NEW_MISSION';
 
 const missions = [];

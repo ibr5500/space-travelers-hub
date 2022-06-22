@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { fetchData } from '../redux/rockets/missions';
+import { fetchData } from '../redux/missions/missions';
 
 const Missions = () => {
   const displayRockets = useSelector((state) => state.missions);
