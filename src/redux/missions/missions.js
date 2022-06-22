@@ -13,8 +13,6 @@ export const fetchData = () => async (dispatch) => {
 };
 const missionsReducer = (state = missions, action) => {
   switch (action.type) {
-    case NEW_MISSION:
-      return [...state, 'new_mission'];
     case GET_DATA:
       return;
       action.payload.map((mission) => ({

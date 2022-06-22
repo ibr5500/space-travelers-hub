@@ -15,7 +15,7 @@ const Missions = () => {
       Missions
       <div>
         {displayRockets.map((mission) => (
-          <p key={missions.id}>
+          <p key={mission.id}>
             {mission.id}
             ,
             {mission.name}
