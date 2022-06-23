@@ -1,9 +1,20 @@
 import axios from 'axios';
-// import { v4 as uuidv4 } from 'uuid';
 
-const GET_DATA = 'GET_DATA';
+const GET_DATA = 'SPACE_TRAVELERS_HUB/redux/GET_DATA';
+const RESERVE = 'SPACE_TRAVELERS_HUB/redux/RESERVE';
+const CANCEL = 'SPACE_TRAVELERS_HUB/redux/CANCEL';
 const baseURL = 'https://api.spacexdata.com/v3/rockets';
 const Rockets = [];
+
+export const reserveRocket = (id) => (dispatch) => dispatch({
+  type: RESERVE,
+  payload: id,
+});
+
+export const cancelReseve = (id) => (dispatch) => dispatch({
+  type: CANCEL,
+  payload: id,
+});
 
 export const fetchData = () => async (dispatch) => {
   const res = await axios.get(`${baseURL}`);
@@ -21,6 +32,21 @@ const rocketsReducer = (state = Rockets, action) => {
         image: rocket.flickr_images,
         reserved: false,
       }));
+
+    case RESERVE:
+      return state.map((rocket) => {
+        if (rocket.id !== action.payload) {
+          return { ...rocket };
+        }
+        return { ...rocket, reserved: true };
+      });
+    case CANCEL:
+      return state.map((rocket) => {
+        if (rocket.id === action.payload) {
+          return { ...rocket, reserved: false };
+        }
+        return { ...rocket };
+      });
     default:
       return state;
   }
