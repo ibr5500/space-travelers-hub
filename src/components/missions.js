@@ -11,20 +11,26 @@ const Missions = () => {
   }, []);
 
   return (
-    <div>
-      Missions
-      <div>
-        {displayMissions.map((mission, index) => (
-          <div key={[index]}>
-            <div>
-              <h2>{mission.name}</h2>
-              <p>{mission.description}</p>
-            </div>
-            <hr />
-          </div>
+    <table>
+      <thead>
+        <tr>
+          <th className="mission-name">Mission</th>
+          <th className="mission-description">Description</th>
+          <th className="mission-status">Status</th>
+          <th>{' '}</th>
+        </tr>
+      </thead>
+      <tbody>
+        {displayMissions.map((mission, index, reserved, joinMission, leaveMission, id) => (
+          <tr key={[index]}>
+            <td>{mission.name}</td>
+            <td>{mission.description}</td>
+            <td className="text-center"><span className={(!reserved && 'status-field unavailable-status') || (reserved && 'status-field available-status')}>{(!reserved && 'NOT A MEMBER') || (reserved && 'ACTIVE MEMBER')}</span></td>
+            <td className="text-center"><button onClick={() => dispatch((!reserved && joinMission(id)) || (reserved && leaveMission(id)))} className={(!reserved && 'button-mission join-mission') || (reserved && 'button-mission leave-mission')} type="button">{(!reserved && 'JOIN MISSION') || (reserved && 'LEAVE MISSION')}</button></td>
+          </tr>
         ))}
-      </div>
-    </div>
+      </tbody>
+    </table>
   );
 };
 
