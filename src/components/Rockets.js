@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { fetchData } from '../redux/rockets/rockets';
+import { reserveRocket, cancelReseve, fetchData } from '../redux/rockets/rockets';
 
 const Rockets = () => {
   const displayRockets = useSelector((state) => state.rockets);
@@ -10,6 +10,14 @@ const Rockets = () => {
     dispatch(fetchData());
   }, []);
 
+  const handleReserve = (id) => {
+    dispatch(reserveRocket(id));
+  };
+
+  const handleCancel = (id) => {
+    dispatch(cancelReseve(id));
+  };
+
   return (
     <div className="rocket-container">
       {displayRockets.map((rocket, index) => (
@@ -18,10 +26,11 @@ const Rockets = () => {
           <div className="rocket-info">
             <h2>{rocket.name}</h2>
             <p>
-              <span>Reserved</span>
+              {(rocket.reserved) ? <span>Reserved</span> : '' }
               {rocket.description}
             </p>
-            <button type="button">Reserve Rocket</button>
+            {(rocket.reserved) ? <button type="button" className="canceled" onClick={() => handleCancel(rocket.id)}>Cancel Reservation</button>
+              : <button type="button" className="booked" onClick={() => handleReserve(rocket.id)}>Reserve Rocket</button> }
           </div>
         </div>
       ))}
