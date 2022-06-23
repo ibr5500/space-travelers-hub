@@ -28,16 +28,15 @@ const missionsReducer = (state = missions, action) => {
         id: mission.mission_id,
         name: mission.mission_name,
         description: mission.description,
-        image: mission.flickr_images,
-        join: false,
+        joined: false,
       }));
 
     case JOIN:
       return state.map((mission) => {
-        if (mission.id !== action.payload) {
-          return { ...mission };
+        if (mission.id === action.payload) {
+          return { ...mission, joined: true };
         }
-        return { ...mission, joined: true };
+        return { ...mission };
       });
 
     case LEAVE:

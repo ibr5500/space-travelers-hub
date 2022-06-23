@@ -143,11 +143,11 @@ th {
   padding: 8px;
 }
 
-tr {
+.mission-row {
   background-color: lightgrey;
 }
 
-tr:nth-child(even) {
+.mission-row:nth-child(even) {
   background-color: #fff;
 }
 
@@ -165,7 +165,7 @@ tr:nth-child(even) {
 
 .mission-status,
 .mission-action {
-  width: 15%;
+  width: 12%;
   text-align: center;
 }
 
@@ -199,4 +199,38 @@ tr:nth-child(even) {
 .leave-mission {
   border: 1px solid #cd142d;
   color: #cd142d;
+}
+
+.profile-container {
+  display: flex;
+  flex-direction: row;
+  width: 90%;
+  height: auto;
+  margin: 40px auto;
+  gap: 50px;
+}
+
+.my-missions,
+.my-rockets {
+  width: 45%;
+}
+
+.my-missions-list,
+.my-rockets-list {
+  min-height: 60px;
+  border: 2px solid #bcbcbc;
+  border-radius: 8px;
+  margin: 20px auto;
+}
+
+.my-missions-list h2,
+.my-rockets-list h2 {
+  font-size: 2rem;
+  padding: 15px 0;
+}
+
+.my-missions-list h4,
+.my-rockets-list h4 {
+  padding: 20px 30px;
+  border-bottom: 1px solid #bcbcbc;
 }
