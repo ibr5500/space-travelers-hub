@@ -11,20 +11,26 @@ const Missions = () => {
   }, []);
 
   return (
-    <div>
-      Missions
-      <div>
+    <table>
+      <thead>
+        <tr>
+          <th className="mission-name">Mission</th>
+          <th className="mission-description">Description</th>
+          <th className="mission-status">Status</th>
+          <th>{' '}</th>
+        </tr>
+      </thead>
+      <tbody>
         {displayMissions.map((mission, index) => (
-          <div key={[index]}>
-            <div>
-              <h2>{mission.name}</h2>
-              <p>{mission.description}</p>
-            </div>
-            <hr />
-          </div>
+          <tr key={[index]}>
+            <td>{mission.name}</td>
+            <td>{mission.description}</td>
+            <td>{index}</td>
+            <td><button type="button" className="button-mission">Join Mission</button></td>
+          </tr>
         ))}
-      </div>
-    </div>
+      </tbody>
+    </table>
   );
 };
 

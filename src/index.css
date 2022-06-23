@@ -25,3 +25,66 @@ code {
     'Courier New',
     monospace;
 }
+
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td,
+th {
+  border: 1px solid #ddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #ddd;
+}
+
+.mission-name {
+  width: 20%;
+}
+
+.mission-description {
+  width: 50%;
+}
+
+.mission-status,
+.mission-action {
+  width: 15%;
+  text-align: center;
+}
+
+.status-field {
+  font-size: 0.8em;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 4px;
+}
+
+.unavailable-status {
+  background: gray;
+}
+
+.available-status {
+  background: #1b90a8;
+}
+
+.button-mission {
+  padding: 5px 10px;
+  background: transparent;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.join-mission {
+  border: 1px solid gray;
+  color: gray;
+}
+
+.leave-mission {
+  border: 1px solid #cd142d;
+  color: #cd142d;
+}
