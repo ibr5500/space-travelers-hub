@@ -11,21 +11,20 @@ const Rockets = () => {
   }, []);
 
   return (
-    <div>
-      Rockets
-      <div>
-        {displayRockets.map((rocket) => (
-          <p key={rocket.id}>
-            {rocket.id}
-            ,
-            {rocket.name}
-            ,
-            {rocket.type}
-            ,
-            <img src={rocket.image} alt={rocket.name} />
-          </p>
-        ))}
-      </div>
+    <div className="rocket-container">
+      {displayRockets.map((rocket, index) => (
+        <div key={[index]} className="rocket">
+          <img className="rocket-img" src={rocket.image} alt={rocket.name} />
+          <div className="rocket-info">
+            <h2>{rocket.name}</h2>
+            <p>
+              <span>Reserved</span>
+              {rocket.description}
+            </p>
+            <button type="button">Reserve Rocket</button>
+          </div>
+        </div>
+      ))}
     </div>
   );
 };

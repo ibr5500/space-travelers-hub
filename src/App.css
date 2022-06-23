@@ -15,6 +15,7 @@ nav {
   width: auto;
   justify-content: space-between;
   padding: 20px 50px;
+  border-bottom: 2px solid #d2d2d2;
 }
 
 .nav-header {
@@ -41,10 +42,73 @@ nav ul {
 }
 
 li a {
+  color: #0086ff;
   text-decoration: none;
   font-size: 20px;
 }
 
+li:last-child {
+  border-left: 2px solid #bcbcbc;
+  height: auto;
+  padding: 0 0 0 5px;
+}
+
 .active {
   text-decoration: underline;
+}
+
+.rocket-container {
+  display: flex;
+  flex-direction: column;
+  width: auto;
+  height: auto;
+  padding: 50px 20px;
+}
+
+.rocket {
+  display: flex;
+  flex-direction: row;
+  width: auto;
+  padding: 20px;
+}
+
+.rocket-img {
+  width: 25%;
+  height: auto;
+}
+
+.rocket-info {
+  padding: 10px 20px;
+  width: 90%;
+}
+
+.rocket-info h2 {
+  font-size: 2rem;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  color: #2d2d2d;
+}
+
+.rocket-info p {
+  font-size: 1.1rem;
+  font-family: sans-serif;
+  color: #3a3a3a;
+  padding: 10px 0;
+}
+
+span {
+  display: none; /* make it dynamical */
+  background-color: #0086ff;
+  color: #fff;
+  font-size: 0.8rem;
+  padding: 2px 5px;
+  margin: 0 10px 10px 0;
+  border-radius: 4px;
+}
+
+.rocket-info button {
+  background-color: #0086ff;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
 }
