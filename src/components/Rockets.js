@@ -7,7 +7,7 @@ const Rockets = () => {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    dispatch(fetchData());
+    if (!displayRockets.length) dispatch(fetchData());
   }, []);
 
   const handleReserve = (id) => {
