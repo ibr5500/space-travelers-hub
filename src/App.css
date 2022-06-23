@@ -116,7 +116,8 @@ span {
 table {
   font-family: arial, sans-serif;
   border-collapse: collapse;
-  width: 100%;
+  width: 95%;
+  margin: 30px auto;
 }
 
 td{
@@ -133,7 +134,7 @@ th {
 }
 
 tr {
-  background-color: gray;
+  background-color:lightgrey;
 }
 
 tr:nth-child(even) {
