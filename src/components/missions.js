@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { joinMission, fetchData } from '../redux/missions/missions';
+import { joinMission, fetchData, leaveMission } from '../redux/missions/missions';
 
 const Missions = () => {
   const displayMissions = useSelector((state) => state.missions);
@@ -14,6 +14,9 @@ const Missions = () => {
     dispatch(joinMission(id));
   };
 
+  const handleLeave = (id) => {
+    dispatch(leaveMission(id));
+  };
   return (
     <table>
       <thead>
@@ -25,12 +28,15 @@ const Missions = () => {
         </tr>
       </thead>
       <tbody>
-        {displayMissions.map((mission, index, reserved, joinMission, leaveMission, id) => (
+        {displayMissions.map((mission, index) => (
           <tr key={[index]}>
             <td>{mission.name}</td>
             <td>{mission.description}</td>
-            <td className="text-center"><span className={(!reserved && 'status-field unavailable-status') || (reserved && 'status-field available-status')}>{(!reserved && 'NOT A MEMBER') || (reserved && 'ACTIVE MEMBER')}</span></td>
-            <td className="text-center"><button onClick={() => dispatch((!reserved && handleJoin(id)) || (reserved && leaveMission(id)))} className={(!reserved && 'button-mission join-mission') || (reserved && 'button-mission leave-mission')} type="button">{(!reserved && 'JOIN MISSION') || (reserved && 'LEAVE MISSION')}</button></td>
+            <td className="text-center">{(mission.join) ? <span className="status-field unavailable-status">Not a Member</span> : <span className="status-field available-status">Active Member</span> }</td>
+            <td className="text-center">
+              {(mission.join) ? <button type="button" className="button-mission join-mission" onClick={() => handleJoin(mission.id)}>Join Mission</button>
+                : <button type="button" className="button-mission leave-mission" onClick={() => handleLeave(mission.id)}>Leave Mission</button>}
+            </td>
           </tr>
         ))}
       </tbody>
