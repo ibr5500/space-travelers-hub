@@ -43,6 +43,10 @@ tr:nth-child(even) {
   background-color: #ddd;
 }
 
+.text-center {
+  text-align: center;
+}
+
 .mission-name {
   width: 20%;
 }

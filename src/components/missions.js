@@ -21,12 +21,12 @@ const Missions = () => {
         </tr>
       </thead>
       <tbody>
-        {displayMissions.map((mission, index) => (
+        {displayMissions.map((mission, index, reserved, joinMission, leaveMission, id) => (
           <tr key={[index]}>
             <td>{mission.name}</td>
             <td>{mission.description}</td>
-            <td>{index}</td>
-            <td><button type="button" className="button-mission">Join Mission</button></td>
+            <td className="text-center"><span className={(!reserved && 'status-field unavailable-status') || (reserved && 'status-field available-status')}>{(!reserved && 'NOT A MEMBER') || (reserved && 'ACTIVE MEMBER')}</span></td>
+            <td className="text-center"><button onClick={() => dispatch((!reserved && joinMission(id)) || (reserved && leaveMission(id)))} className={(!reserved && 'button-mission join-mission') || (reserved && 'button-mission leave-mission')} type="button">{(!reserved && 'JOIN MISSION') || (reserved && 'LEAVE MISSION')}</button></td>
           </tr>
         ))}
       </tbody>
