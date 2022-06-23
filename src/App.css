@@ -120,7 +120,7 @@ table {
   margin: 30px auto;
 }
 
-td{
+td {
   border: 1px solid #ddd;
   text-align: left;
   padding: 8px;
@@ -134,7 +134,7 @@ th {
 }
 
 tr {
-  background-color:lightgrey;
+  background-color: lightgrey;
 }
 
 tr:nth-child(even) {
