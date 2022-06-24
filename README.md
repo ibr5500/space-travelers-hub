@@ -68,7 +68,7 @@ npm test
 - Right click on your opened index.html file and launch the live server to preview
 - Include any possible changes and run "git add ."
 - Commit the changes with a descriptive message (i.e xyz features added)
-- Push the changes to changes to the repository (i.e git push) perfered (i.e git push <New-branch>)
+- Push the changes to changes to the repository (i.e git push)
 
 ## Authors
 
