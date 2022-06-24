@@ -1,0 +1,35 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Tests for the Missions page Should render the Missions page 1`] = `
+<table>
+  <thead>
+    <tr>
+      <th
+        className="mission-name"
+      >
+        <h3>
+          Mission
+        </h3>
+      </th>
+      <th
+        className="mission-description"
+      >
+        <h3>
+          Description
+        </h3>
+      </th>
+      <th
+        className="mission-status"
+      >
+        <h3>
+          Status
+        </h3>
+      </th>
+      <th>
+         
+      </th>
+    </tr>
+  </thead>
+  <tbody />
+</table>
+`;
