@@ -1,6 +1,5 @@
 import renderer from 'react-test-renderer';
-import { fireEvent, render, screen,  } from '@testing-library/react';
-import { BrowserRouter } from 'react-router-dom';
+import { render, screen } from '@testing-library/react';
 import { Provider } from 'react-redux';
 import store from '../../redux/configureStore';
 import Missions from '../missions';

@@ -1,6 +1,6 @@
 import React from 'react';
 import '@testing-library/jest-dom';
-import { fireEvent, render, screen,  } from '@testing-library/react';
+import { fireEvent, render, screen } from '@testing-library/react';
 import renderer from 'react-test-renderer';
 import { BrowserRouter } from 'react-router-dom';
 import Navbar from '../Navbar';
