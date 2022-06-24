@@ -235,3 +235,8 @@ th {
   padding: 20px 30px;
   border-bottom: 1px solid #bcbcbc;
 }
+
+.empty-list {
+  color: #b5b5b5;
+  font-style: italic;
+}
