@@ -1,0 +1,242 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+nav {
+  display: flex;
+  flex-direction: row;
+  height: 50px;
+  width: auto;
+  justify-content: space-between;
+  padding: 20px 50px;
+  border-bottom: 2px solid #d2d2d2;
+}
+
+.nav-header {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  align-items: center;
+}
+
+.nav-header img {
+  width: 60px;
+  height: 60px;
+}
+
+.nav-header h3 {
+  font-size: 26px;
+}
+
+nav ul {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  gap: 15px;
+}
+
+li a {
+  color: #0086ff;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+li:last-child {
+  border-left: 2px solid #bcbcbc;
+  height: auto;
+  padding: 0 0 0 5px;
+}
+
+.active {
+  text-decoration: underline;
+}
+
+.rocket-container {
+  display: flex;
+  flex-direction: column;
+  width: auto;
+  height: auto;
+  padding: 50px 20px;
+}
+
+.rocket {
+  display: flex;
+  flex-direction: row;
+  width: auto;
+  padding: 20px;
+}
+
+.rocket-img {
+  width: 25%;
+  height: auto;
+}
+
+.rocket-info {
+  padding: 10px 20px;
+  width: 90%;
+}
+
+.rocket-info h2 {
+  font-size: 2rem;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  color: #2d2d2d;
+}
+
+.rocket-info p {
+  font-size: 1.1rem;
+  font-family: sans-serif;
+  color: #3a3a3a;
+  padding: 10px 0;
+}
+
+.rocket-info p span {
+  background-color: #0086ff;
+  color: #fff;
+  font-size: 0.8rem;
+  padding: 2px 5px;
+  margin: 0 10px 10px 0;
+  border-radius: 4px;
+}
+
+.rocket-info button {
+  width: auto;
+  height: 40px;
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: none;
+}
+
+.rocket-info .booked {
+  background-color: #0086ff;
+  color: #fff;
+}
+
+.rocket-info .canceled {
+  background-color: #fff;
+  color: #2d2d2d;
+  border: 2px solid #2d2d2d;
+}
+
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 95%;
+  margin: 30px auto;
+}
+
+td {
+  border: 1px solid #ddd;
+  text-align: left;
+  padding: 8px;
+}
+
+th {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  text-align: left;
+  padding: 8px;
+}
+
+.mission-row {
+  background-color: lightgrey;
+}
+
+.mission-row:nth-child(even) {
+  background-color: #fff;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.mission-name {
+  width: 12%;
+}
+
+.mission-description {
+  width: auto;
+}
+
+.mission-status,
+.mission-action {
+  width: 12%;
+  text-align: center;
+}
+
+.status-field {
+  font-size: 0.8em;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 4px;
+}
+
+.unavailable-status {
+  background: gray;
+}
+
+.available-status {
+  background: #1b90a8;
+}
+
+.button-mission {
+  padding: 5px 10px;
+  background: transparent;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.join-mission {
+  border: 1px solid gray;
+  color: gray;
+}
+
+.leave-mission {
+  border: 1px solid #cd142d;
+  color: #cd142d;
+}
+
+.profile-container {
+  display: flex;
+  flex-direction: row;
+  width: 90%;
+  height: auto;
+  margin: 40px auto;
+  gap: 50px;
+}
+
+.my-missions,
+.my-rockets {
+  width: 45%;
+}
+
+.my-missions-list,
+.my-rockets-list {
+  min-height: 60px;
+  border: 2px solid #bcbcbc;
+  border-radius: 8px;
+  margin: 20px auto;
+}
+
+.my-missions-list h2,
+.my-rockets-list h2 {
+  font-size: 2rem;
+  padding: 15px 0;
+}
+
+.my-missions-list h4,
+.my-rockets-list h4 {
+  padding: 20px 30px;
+  border-bottom: 1px solid #bcbcbc;
+}
+
+.empty-list {
+  color: #b5b5b5;
+  font-style: italic;
+}
