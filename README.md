@@ -23,7 +23,7 @@
 
 ## Live Demo (if available)
 
-Not available
+Please [click](https://spacex-booking.netlify.app/) here for the live demo
 
 ## Getting Started
 
