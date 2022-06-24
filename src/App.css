@@ -1,6 +1,7 @@
 * {
   padding: 0;
   margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 body {
@@ -233,4 +234,9 @@ th {
 .my-rockets-list h4 {
   padding: 20px 30px;
   border-bottom: 1px solid #bcbcbc;
+}
+
+.empty-list {
+  color: #b5b5b5;
+  font-style: italic;
 }

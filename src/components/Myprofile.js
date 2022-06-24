@@ -12,6 +12,7 @@ const Myprofile = () => {
       <div className="my-missions">
         <h2>My Missions</h2>
         <div className="my-missions-list">
+          {(!joinedMissions.length) ? <h4 key="0" className="empty-list">You did not join any mission</h4> : ''}
           {joinedMissions.map((mission) => (
             <h4 key={mission.id}>{mission.name}</h4>
           ))}
@@ -20,6 +21,7 @@ const Myprofile = () => {
       <div className="my-rockets">
         <h2>My Rockets</h2>
         <div className="my-rockets-list">
+          {(!reserveRockets.length) ? <h4 key="0" className="empty-list">You did not reserved any rocket</h4> : ''}
           {reserveRockets.map((rocket) => (
             <h4 key={rocket.id}>{rocket.name}</h4>
           ))}

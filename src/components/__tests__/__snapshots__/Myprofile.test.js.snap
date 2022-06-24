@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test for Myprofile page Should render the Myprofile page 1`] = `
+<div
+  className="profile-container"
+>
+  <div
+    className="my-missions"
+  >
+    <h2>
+      My Missions
+    </h2>
+    <div
+      className="my-missions-list"
+    />
+  </div>
+  <div
+    className="my-rockets"
+  >
+    <h2>
+      My Rockets
+    </h2>
+    <div
+      className="my-rockets-list"
+    />
+  </div>
+</div>
+`;
