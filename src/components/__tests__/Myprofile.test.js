@@ -5,7 +5,6 @@ import store from '../../redux/configureStore';
 import Myprofile from '../Myprofile';
 
 describe('Test for Myprofile page', () => {
-  
   test('The page should renders My Missions', () => {
     render(<Provider store={store}><Myprofile /></Provider>);
     const element = screen.getByText(/My Missions/i);
